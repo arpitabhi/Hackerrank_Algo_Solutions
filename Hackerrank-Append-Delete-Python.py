@@ -118,3 +118,5 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+
+#Append Delete Hackerrank Solution in Python
