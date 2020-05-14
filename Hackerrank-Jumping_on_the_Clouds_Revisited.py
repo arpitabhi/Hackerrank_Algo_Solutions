@@ -69,3 +69,5 @@ if __name__ == '__main__':
     fptr.write(str(result) + '\n')
 
     fptr.close()
+	
+#Jumping on the clouds Revisited Hackerrank Solution in Python
