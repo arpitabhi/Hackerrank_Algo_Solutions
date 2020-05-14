@@ -77,7 +77,7 @@ def appendAndDelete(s, t, k):
     '''
 
     #Solution 3
-
+	'''
     if ((len(s) + len(t)+1)<= k): 
         return "Yes"
   
@@ -93,13 +93,37 @@ def appendAndDelete(s, t, k):
     if k//(len(s)+len(t)-(2*i))>0:
         return "Yes"
     '''
-    if ((k - len(s) - len(t) + 2 *commonLength) % 2 == 0): 
-        return "Yes"
+    #if ((k - len(s) - len(t) + 2 *commonLength) % 2 == 0): 
+    #   return "Yes"
     '''
   
     # Case B- 
     return "No"
-
+	'''
+	
+	#Solution 4 : The Final nail in the coffin
+	
+	if ((len(s) + len(t))<= k): 
+        return "Yes"
+  
+    # finding common length of both string 
+    
+    for i in range(0, min(len(s), len(t))): 
+        if (s[i] != t[i]): 
+            break
+    
+    if i+1==min(len(s),len(t)):
+        i+=1
+    
+    # Case A (ii)- 
+    f=len(s)+len(t)-2*i
+    if f<=k:
+        if (k-f)%2==0:
+            return "Yes"
+    
+      
+    # Case B- 
+    return "No"
 
 
 
